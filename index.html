@@ -26,12 +26,12 @@
 
         .body--ready {
 			/* background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(55, 148, 192) 120%); */
-            /* background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
             background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
             background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
             background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%); */
-			background: url(img/kehu3.jpg) repeat fixed center;
+            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+			/* background: url(img/1.jpg) repeat fixed center; */
         }
 
         .text {
@@ -100,11 +100,12 @@
 
 <body>
 <div class="cs">
-    <img src="img/gb.png">
+    <img src="img/7.png">
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
 <p class="text" style="color: #8ef5ff;">
-    感谢让我遇到你&😘
+    邓振明&刘玉慧
+	距结婚还有：
     <br/>
     <span id="span_dt_dt"></span>
 </p>
@@ -112,9 +113,10 @@
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
 		//你俩在一起的那天
-        BirthDay = new Date("02/06/2023 00:00:00");
+        BirthDay = new Date("09/13/2023 00:00:00");
         today = new Date();
-        timeold = (today.getTime() - BirthDay.getTime());
+        /* timeold = (today.getTime() - BirthDay.getTime()); */
+		timeold = (BirthDay.getTime() - today.getTime());
         sectimeold = timeold / 1000
         secondsold = Math.floor(sectimeold);
         msPerDay = 24 * 60 * 60 * 1000
@@ -136,7 +138,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //S.UI.simulate("How|I|Meet|My|Dear|Pig|I|Love|You|#countdown 3|#time");
-			S.UI.simulate("张艳，|很开心|我们出现在|彼此的生命里，|成为彼此|很重要的人。|希望|在彼此的眼里，|对方|始终是|最好的那个。|#countdown 3|#time");
+			S.UI.simulate("刘玉慧，|很开心|我们出现在|彼此的生命里，|成为彼此|很重要的人。|希望|在彼此的眼里，|对方|始终是|最好的那个。|#countdown 3|#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -283,14 +285,14 @@
 
                         if (sequence.length > 0) {
                             //定格
-                             S.Shape.switchShape(S.ShapeBuilder.letter("想你了"))
+                             S.Shape.switchShape(S.ShapeBuilder.letter("邓振明❤刘玉慧"))
                         } else {
                             timedAction(function () {
                                 t = formatTime(new Date());
                                 if (t !== time) {
                                     time = t;
                                     //定格
-                                     S.Shape.switchShape(S.ShapeBuilder.letter("想你了"))
+                                     S.Shape.switchShape(S.ShapeBuilder.letter("邓振明❤刘玉慧"))
                                 }
                             }, 1000);
                         }
